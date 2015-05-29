@@ -1,11 +1,13 @@
 <ion-view view-title="Contact">
-  <ion-content>
+  <ion-content style="margin:10px;">
     <ion-list>
         <ion-item ng-repeat="contact in contacts" class="item-remove-animate item-avatar item-icon-right card" href="#">
           <img ng-src="{{contact.photoUrl}}">
           <h2>{{contact.name}}</h2>
           <p>{{contact.title}}</p>
-          <p>{{contact.phone}}</p>
+          <p><a class="icon-left ion-ios7-telephone " 
+                ng-href="tel: {{contact.phone}}">{{contact.phone}}</a></p>
+          
           <p>{{contact.email}}</p>
           <i class="icon ion-chevron-right icon-accessory"></i>
         </ion-item>
