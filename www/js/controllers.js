@@ -1,16 +1,19 @@
 angular.module('empire-services.controllers', [])
 
-.controller('AppCtrl',function($scope){
+.controller('AppCtrl',['$scope','$state',function($scope,$state){
+	console.log('AppCtrl loaded');
+	$scope.switchToState = function(state){
+		$state.go(state);
+	};
+}])
+.controller('HomeCtrl',['$scope','$state', function($scope,$state) {
 	
-})
-.controller('HomeCtrl', function($scope) {
-	
-})
+}])
 .controller('ContactCtrl',function($scope){
 	
 })
-.controller('ContactListCtrl',function($scope){
-	$scope.contacts = [
+.controller('AgentsCtrl',function($scope){
+	$scope.agents = [
 		{
 			name:'John Smith',
 			title:'Manager',
@@ -34,6 +37,13 @@ angular.module('empire-services.controllers', [])
 		}
 	];
 })
-.controller('ImmediateActionCtrl',function($scope){
-	
-});
+.controller('ImmediateActionCtrl'['$scope','$state',function($scope,$state){
+	$scope.selectAction = function(actionType){
+		//TODO: Need to persist the action type in stateParams
+		$state.go('app.immediate-action-detail');
+	};
+}])
+.controller('ImmediateActionDetailCtrl',['$scope',function($scope){
+	$scope.actionType = '';
+}]);
+

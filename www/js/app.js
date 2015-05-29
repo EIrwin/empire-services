@@ -15,35 +15,35 @@ angular.module('empire-services-mobile-app', ['ionic', 'empire-services.controll
     url: "/app",
     abstract: true,
     templateUrl: "templates/menu.html",
-    controller: 'AppCtrl'
+    controller:'AppCtrl'
   })
   
   .state('app.home', {
     url: "/home",
     views: {
       'menuContent': {
-        templateUrl: "templates/home.html",
-        controller:'HomeCtrl'
+        templateUrl: "templates/home.html"
       }
-    }
+    },
+    controller:'HomeCtrl'
   })
 
   .state('app.contact', {
     url: "/contact",
     views: {
       'menuContent': {
-        templateUrl: "templates/contact.html",
-        controller:'ContactCtrl'
+        templateUrl: "templates/contact.html"
       }
-    }
+    },
+    controller:'ContactCtrl'
   })
   
-    .state('app.contact-list', {
-    url: "/contact-list",
+    .state('app.agents', {
+    url: "/agents",
     views: {
       'menuContent': {
-        templateUrl: "templates/contact-list.html",
-        controller:'ContactListCtrl'
+        templateUrl: "templates/agents.html",
+        controller:'AgentsCtrl'
       }
     }
   })
@@ -61,10 +61,10 @@ angular.module('empire-services-mobile-app', ['ionic', 'empire-services.controll
     url: "/immediate-action",
     views: {
       'menuContent': {
-        templateUrl: "templates/immediate-action.html",
-        controller:'ImmediateActionCtrl'
+        templateUrl: "templates/immediate-action.html"
       }
-    }
+    },
+    controller:'ImmediateActionCtrl'
   });
   
   // if none of the above states are matched, use this as the fallback
