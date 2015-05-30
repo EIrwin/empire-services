@@ -1,0 +1,16 @@
+<ion-view view-title="Agents">
+  <ion-content style="margin:10px;">
+    <ion-list>
+        <ion-item ng-repeat="agent in agents" class="item-remove-animate item-avatar item-icon-right card" href="#">
+          <img ng-src="{{agent.photoUrl}}">
+          <h2>{{agent.name}}</h2>
+          <p>{{agent.title}}</p>
+          <p><a class="icon-left ion-ios7-telephone " 
+                ng-href="tel: {{agent.phone}}">{{agent.phone}}</a></p>
+          
+          <p>{{agent.email}}</p>
+          <i class="icon ion-chevron-right icon-accessory"></i>
+        </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
