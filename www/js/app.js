@@ -22,20 +22,21 @@ angular.module('empire-services-mobile-app', ['ionic', 'empire-services.controll
     url: "/home",
     views: {
       'menuContent': {
-        templateUrl: "templates/home.html"
+        templateUrl: "templates/home.html",
+        controller:'HomeCtrl'
       }
-    },
-    controller:'HomeCtrl'
+    }
   })
 
   .state('app.contact', {
     url: "/contact",
     views: {
       'menuContent': {
-        templateUrl: "templates/contact.html"
+        templateUrl: "templates/contact.html",
+        controller:'ContactCtrl'
       }
     },
-    controller:'ContactCtrl'
+    
   })
   
     .state('app.agents', {
@@ -61,10 +62,22 @@ angular.module('empire-services-mobile-app', ['ionic', 'empire-services.controll
     url: "/immediate-action",
     views: {
       'menuContent': {
-        templateUrl: "templates/immediate-action.html"
+        templateUrl: "templates/immediate-action.html",
+        controller:'ImmediateActionCtrl'
       }
     },
-    controller:'ImmediateActionCtrl'
+    
+  })
+
+  .state('app.immediate-action.details', {
+    url: "/:id",
+    views: {
+      'menuContent@app': {
+        templateUrl: "templates/immediate-action-detail.html",
+        controller:'ImmediateActionDetailCtrl'
+      }
+    },
+    
   });
   
   // if none of the above states are matched, use this as the fallback

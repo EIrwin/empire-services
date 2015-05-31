@@ -7,7 +7,7 @@ angular.module('empire-services.controllers', [])
 	};
 }])
 .controller('HomeCtrl',['$scope','$state', function($scope,$state) {
-	
+	console.log('HomeCtrl loaded');
 }])
 .controller('ContactCtrl',function($scope){
 	
@@ -37,11 +37,14 @@ angular.module('empire-services.controllers', [])
 		}
 	];
 })
-.controller('ImmediateActionCtrl'['$scope','$state',function($scope,$state){
-	$scope.selectAction = function(actionType){
-		//TODO: Need to persist the action type in stateParams
-		$state.go('app.immediate-action-detail');
+.controller('ImmediateActionCtrl', ['$scope','$state',function($scope,$state){
+
+	console.log('ImmediateActionCtrl loaded');
+
+	$scope.goToState = function(param){
+		$state.go('app.immediate-action.details', {id : param});
 	};
+	
 }])
 .controller('ImmediateActionDetailCtrl',['$scope',function($scope){
 	$scope.actionType = '';

@@ -1,20 +1,20 @@
 <ion-view view-title="Take Immediate Action">
   <ion-content style="margin:10px;">
     <ion-list>
-        <ion-item class="item-icon-right" href="#">
+        <ion-item class="item-icon-right" ng-click="goToState('fire')">
           <h2>Fire Damage</h2>
           <i class="icon ion-chevron-right icon-accessory"></i>
         </ion-item>
-        <ion-item class="item-icon-right" href="#">
+        <ion-item class="item-icon-right" ng-click="goToState('water')">
           <h2>Water Damage</h2>
           <i class="icon ion-chevron-right icon-accessory"></i>
         </ion-item>
-        <ion-item class="item-icon-right" href="#">
-          <h2>Immediate Action 3</h2>
+        <ion-item class="item-icon-right" ng-click="goToState('mold')">
+          <h2>Mold Damage</h2>
           <i class="icon ion-chevron-right icon-accessory"></i>
         </ion-item>
-        <ion-item class="item-icon-right" href="#">
-          <h2>Immediate Action 1</h2>
+        <ion-item class="item-icon-right" ng-click="goToState('sewage')">
+          <h2>Sewage Damage</h2>
           <i class="icon ion-chevron-right icon-accessory"></i>
         </ion-item>
     </ion-list>
