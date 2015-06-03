@@ -12,23 +12,23 @@
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content>
 
-  <ion-side-menu side="left">
-    <ion-header-bar class="bar-stable">
-      <h1 class="title">Left</h1>
-    </ion-header-bar>
+  <ion-side-menu side="left" >
     <ion-content>
       <ion-list>
-        <ion-item menu-close ng-click="login()">
-          Login
+        <ion-item>
+          <img ng-src="http://www.empireserviceswest.com/wp-content/uploads/2015/01/empire_services_west.png" class="col"></img>
         </ion-item>
-        <ion-item menu-close href="#/app/search">
-          Search
+        <ion-item menu-close href="#/app/home" class="item-icon-left">
+          <i class="icon ion-home"></i>Home
         </ion-item>
-        <ion-item menu-close href="#/app/browse">
-          Browse
+        <ion-item menu-close href="#/app/about" class="item-icon-left">
+          <i class="icon ion-information-circled"></i>About Us
         </ion-item>
-        <ion-item menu-close href="#/app/playlists">
-          Playlists
+        <ion-item menu-close href="#/app/agents" class="item-icon-left">
+          <i class="icon ion-ios-people"></i>Agents
+        </ion-item>
+        <ion-item menu-close href="#/app/contact" class="item-icon-left">
+          <i class="icon ion-email"></i>Contact
         </ion-item>
       </ion-list>
     </ion-content>
