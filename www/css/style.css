@@ -1,1 +1,45 @@
 /* Empty. Add your own CSS if you like */
+
+/* GENERAL */
+.button.button-red {
+  border-color: #741b1f;
+  background-color: #822428;
+  color: #fff;
+}
+.button.button-red.active, .button.button-red.activated {
+      border-color: #a5292e;
+      background-color: #b53035;
+      box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1); }
+
+/* HOME */
+.home {
+	background-image: url(../img/homebg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+.home h1, .home h2, .home h3, .home h4, .home h5, .home h6 {
+	color:#fff;
+	text-shadow: -1px -1px 0 #000,  1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.home h2 {
+	font-size: 50px;
+}
+.home h4 {
+	font-size: 25px;
+}
+.home .button {
+	border-radius: 15px;
+	padding-top:10px;
+	padding-bottom: 10px;
+	font-size: 20px;
+}
+.home img {
+	max-width: 100%;
+	height: auto;
+}
+.home .button .icon:before, .home .button.icon:before, .home .button.icon-left:before, .home .button.icon-right:before {
+  font-size: 54px;
+}
+
+
