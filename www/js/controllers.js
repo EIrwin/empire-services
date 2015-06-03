@@ -1,5 +1,12 @@
 angular.module('empire-services.controllers', [])
 
+//apparently the following config
+//is necessary for handling the different file paths
+//for the images captured by the cordova camera plugin
+.config(function($compileProvider){
+  $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
+})
+
 .controller('AppCtrl',['$scope','$state',function($scope,$state){
 	console.log('AppCtrl loaded');
 	$scope.switchToState = function(state){
@@ -12,6 +19,37 @@ angular.module('empire-services.controllers', [])
 .controller('ContactCtrl',function($scope){
 	
 })
+.controller('PhotoCtrl',['$scope','Camera',function($scope,Camera){
+	$scope.getPhoto = function() {
+	    Camera.getPicture({
+			destinationType:1,	//file URI
+			saveToPhotoAlbum:false,
+			correctOrientation:true
+		}).then(function(imageURI) {
+			$scope.imageURI = imageURI;
+	    }, function(err) {
+	      console.err(err);
+	    });
+	  };
+	  
+	$scope.selectPhoto = function(){
+		Camera.getPicture({
+			sourceType:2,		//photo album,
+			destinationType:2,  //base64
+			saveToPhotoAlbum:false,
+			correctOrientation:true
+		}).then(function(imageData) {
+//	     	$scope.imageURI = imageURI;
+			$scope.imageData = "data:image/jpeg;base64," + imageData;
+	    }, function(err) {
+	      console.err(err);
+	    });
+	};
+	
+	$scope.sendPhoto = function(){
+		
+	};
+}])
 .controller('AgentsCtrl',function($scope){
 	$scope.agents = [
 		{

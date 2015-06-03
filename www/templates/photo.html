@@ -1,0 +1,15 @@
+<ion-view view-title="Photo">
+  <ion-content style="margin:10px;">
+    	<div class="button-bar">
+    		<button class=" button button-block" ng-click="getPhoto()" side="right">
+    	       Take Photo
+    	    </button>
+    		<button class=" button button-block" ng-click="selectPhoto()" side="right">
+    	       Select Photo
+    	    </button>
+    	</div>
+      <img src="{{imageURI}}" style="max-width:100%"></img>
+
+      <button ng-if="imageURI != undefined" class="button button-block button-primary" ng-click="sendPhoto()">Send Photo</button>
+  </ion-content>
+</ion-view>
