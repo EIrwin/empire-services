@@ -1,5 +1,18 @@
 /* Empty. Add your own CSS if you like */
 
+
+/* OVERWRITES */
+.item-avatar > img:first-child, .item-avatar .item-image, .item-avatar .item-content > img:first-child, .item-avatar .item-content .item-image, .item-avatar-left > img:first-child, .item-avatar-left .item-image, .item-avatar-left .item-content > img:first-child, .item-avatar-left .item-content .item-image {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  max-width: 40px;
+  max-height: 50px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
 /* GENERAL */
 .button.button-red {
   border-color: #741b1f;
@@ -51,17 +64,31 @@
 .take-action-wrap .item {
 	height: 25%;
 }
+.take-action-wrap .item h2, .take-action-wrap .item i {
+	color:#fff;
+	font-weight: bold;
+	font-size: 25px;
+}
 .fire {
-	background-color:red;
+	background-color:#f08e2f;
 }
 .water {
-	background-color:blue;
+	background-color:#3ca9d6;
 }
 .mold {
-	background-color:yellow;
+	background-color:#71b81e;
 }
 .sewage {
-	background-color:green;
+	background-color:#eedb5b;
 }
-
+.item-avatar > img.elementCenterAlign:first-child  {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.elementCenterAlign {
+	position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
