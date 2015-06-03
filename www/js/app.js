@@ -76,8 +76,18 @@ angular.module('empire-services-mobile-app', ['ionic', 'empire-services.controll
         templateUrl: "templates/immediate-action-detail.html",
         controller:'ImmediateActionDetailCtrl'
       }
-    },
-    
+    }, 
+  })
+  
+  
+  .state('app.photo', {
+    url: "/photo",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/photo.html",
+        controller:'PhotoCtrl'
+      }
+    }
   });
   
   // if none of the above states are matched, use this as the fallback
