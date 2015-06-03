@@ -32,7 +32,7 @@
 	border-radius: 15px;
 	padding-top:10px;
 	padding-bottom: 10px;
-	font-size: 20px;
+	font-size: 17px;
 }
 .home img {
 	max-width: 100%;
@@ -40,6 +40,28 @@
 }
 .home .button .icon:before, .home .button.icon:before, .home .button.icon-left:before, .home .button.icon-right:before {
   font-size: 54px;
+}
+/* TAKE IMMEDIATE ACTION */
+.take-action-wrap {
+	height:calc(100% - 36px);
+}
+.take-action-wrap .scroll, .take-action-wrap ion-list, .take-action-wrap .list {
+	height:100%;
+}
+.take-action-wrap .item {
+	height: 25%;
+}
+.fire {
+	background-color:red;
+}
+.water {
+	background-color:blue;
+}
+.mold {
+	background-color:yellow;
+}
+.sewage {
+	background-color:green;
 }
 
 
