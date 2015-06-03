@@ -3,8 +3,9 @@
 angular.module('empire-services-mobile-app', ['ionic', 'empire-services.controllers','empire-services.services'])
 
 .run(function($ionicPlatform) {
+  //$cordovaStatusbar.hide();
   $ionicPlatform.ready(function() {
-
+    
   });
 })
 

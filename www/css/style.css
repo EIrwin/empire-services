@@ -56,7 +56,7 @@
 }
 /* TAKE IMMEDIATE ACTION */
 .take-action-wrap {
-	height:calc(100% - 36px);
+	height:calc(100% - 55px);
 }
 .take-action-wrap .scroll, .take-action-wrap ion-list, .take-action-wrap .list {
 	height:100%;
@@ -83,12 +83,10 @@
 }
 .item-avatar > img.elementCenterAlign:first-child  {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 33%;
 }
 .elementCenterAlign {
 	position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 40%;
 }
 
