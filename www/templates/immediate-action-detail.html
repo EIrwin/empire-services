@@ -1,6 +1,73 @@
-<ion-view view-title="{{title}}">
+<ion-view view-title="{{actionType|uppercase }}">
   <ion-content style="margin:10px;">
     <!--Conditionally show sections based on type-->
-    test
+    
+    <!-- Water Damage-->
+    <div ng-if="actionType == 'water'">
+      <h2>Safety First</h2>
+      
+      <h2>1. Electrical:</h2>
+      <p>Where is the electrical box? Can you turn it off? Is the water over electrical sockets on the floor or walls? If so DO NOT TOUCH! </p>
+      
+      <h2>2. Identify the source of the water</h2>
+      <p>a. Category 1: Sanitary Water Source (i.e. broken pipe, sink overflow, etc.)</p>
+      <p>b. Category 2: Contains significant contaminiation (i.e. toilet overflow (before trap), washing machine, dish washer,etc)</p>
+      <p>c. Category 3: Grossly contaminated (i.e. seware, river water, ground surface water, etc)</p>
+    
+      <h2>3. Stop the source of the water</h2>
+      <p>Where is the electrical box? Can you turn it off? Is the water over electrical sockets on the floor or walls? If so DO NOT TOUCH! </p>
+          
+    </div>
+    
+    <!-- Fire Damage-->
+    <div ng-if="actionType == 'fire'">
+      <h2>Safety First</h2>
+      
+      <h2>1. Electrical:</h2>
+      <p>Where is the electrical box? Can you turn it off? Is the water over electrical sockets on the floor or walls? If so DO NOT TOUCH! </p>
+      
+      <h2>2. Identify the source of the water</h2>
+      <p>a. Category 1: Sanitary Water Source (i.e. broken pipe, sink overflow, etc.)</p>
+      <p>b. Category 2: Contains significant contaminiation (i.e. toilet overflow (before trap), washing machine, dish washer,etc)</p>
+      <p>c. Category 3: Grossly contaminated (i.e. seware, river water, ground surface water, etc)</p>
+    
+      <h2>3. Stop the source of the water</h2>
+      <p>Where is the electrical box? Can you turn it off? Is the water over electrical sockets on the floor or walls? If so DO NOT TOUCH! </p>
+          
+    </div>
+    
+    <!-- Mold Damage-->
+    <div ng-if="actionType == 'mold'">
+      <h2>Safety First</h2>
+      
+      <h2>1. Electrical:</h2>
+      <p>Where is the electrical box? Can you turn it off? Is the water over electrical sockets on the floor or walls? If so DO NOT TOUCH! </p>
+      
+      <h2>2. Identify the source of the water</h2>
+      <p>a. Category 1: Sanitary Water Source (i.e. broken pipe, sink overflow, etc.)</p>
+      <p>b. Category 2: Contains significant contaminiation (i.e. toilet overflow (before trap), washing machine, dish washer,etc)</p>
+      <p>c. Category 3: Grossly contaminated (i.e. seware, river water, ground surface water, etc)</p>
+    
+      <h2>3. Stop the source of the water</h2>
+      <p>Where is the electrical box? Can you turn it off? Is the water over electrical sockets on the floor or walls? If so DO NOT TOUCH! </p>
+          
+    </div>
+    
+    <!-- Sewage Damage-->
+    <div ng-if="actionType == 'sewage'">
+      <h2>Safety First</h2>
+      
+      <h2>1. Electrical:</h2>
+      <p>Where is the electrical box? Can you turn it off? Is the water over electrical sockets on the floor or walls? If so DO NOT TOUCH! </p>
+      
+      <h2>2. Identify the source of the water</h2>
+      <p>a. Category 1: Sanitary Water Source (i.e. broken pipe, sink overflow, etc.)</p>
+      <p>b. Category 2: Contains significant contaminiation (i.e. toilet overflow (before trap), washing machine, dish washer,etc)</p>
+      <p>c. Category 3: Grossly contaminated (i.e. seware, river water, ground surface water, etc)</p>
+    
+      <h2>3. Stop the source of the water</h2>
+      <p>Where is the electrical box? Can you turn it off? Is the water over electrical sockets on the floor or walls? If so DO NOT TOUCH! </p>
+          
+    </div>
   </ion-content>
 </ion-view>

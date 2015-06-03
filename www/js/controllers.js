@@ -84,7 +84,7 @@ angular.module('empire-services.controllers', [])
 	};
 	
 }])
-.controller('ImmediateActionDetailCtrl',['$scope',function($scope){
-	$scope.actionType = '';
+.controller('ImmediateActionDetailCtrl',['$scope','$stateParams',function($scope,$stateParams){
+	$scope.actionType = $stateParams.id;
 }]);
 
