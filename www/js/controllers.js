@@ -19,7 +19,7 @@ angular.module('empire-services.controllers', [])
 .controller('ContactCtrl',function($scope){
 	
 })
-.controller('PhotoCtrl',['$scope','Camera',function($scope,Camera){
+.controller('PhotoCtrl',['$scope','Camera','$log',function($scope,Camera,$log){
 	$scope.getPhoto = function() {
 	    Camera.getPicture({
 			destinationType:1,	//file URI
@@ -28,7 +28,7 @@ angular.module('empire-services.controllers', [])
 		}).then(function(imageURI) {
 			$scope.imageURI = imageURI;
 	    }, function(err) {
-	      console.err(err);
+	    	$log.error(err);
 	    });
 	  };
 	  
@@ -42,7 +42,7 @@ angular.module('empire-services.controllers', [])
 //	     	$scope.imageURI = imageURI;
 			$scope.imageData = "data:image/jpeg;base64," + imageData;
 	    }, function(err) {
-	      console.err(err);
+	      	$log.error(err);
 	    });
 	};
 	
