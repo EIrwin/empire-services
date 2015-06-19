@@ -20,6 +20,7 @@ angular.module('empire-services.controllers', [])
 	
 })
 .controller('PhotoCtrl',['$scope','Camera','$log','$cordovaEmailComposer',function($scope,Camera,$log,$cordovaEmailComposer){
+	var email;
 	$scope.getPhoto = function() {
 	    Camera.getPicture({
 	    	sourceType:1,		//camera
@@ -27,7 +28,8 @@ angular.module('empire-services.controllers', [])
 			saveToPhotoAlbum:false,
 			correctOrientation:true
 		}).then(function(imageURI) {
-			var email = {
+			$scope.imageURI = imageURI;
+			email = {
 			    to: 'mobile-receiver@empire-services.com',
 			    cc: 'mobile-receiver@empire-services.com',
 			    bcc: ['john@doe.com', 'jane@doe.com'],
@@ -35,11 +37,6 @@ angular.module('empire-services.controllers', [])
 			    attachments: [imageURI],
 			    isHtml: true
 			  };
-
-			 //open the email prompt
-			 $cordovaEmailComposer.open(email).then(null, function () {
-			   // user cancelled email
-			 });
 
 	    }, function(err) {
 	    	$log.error(err);
@@ -53,7 +50,8 @@ angular.module('empire-services.controllers', [])
 			saveToPhotoAlbum:false,
 			correctOrientation:true
 		}).then(function(imageURI) {
-			var email = {
+			$scope.imageURI = imageURI;
+			email = {
 			    to: 'mobile-receiver@empire-services.com',
 			    cc: 'mobile-receiver@empire-services.com',
 			    bcc: ['john@doe.com', 'jane@doe.com'],
@@ -62,13 +60,18 @@ angular.module('empire-services.controllers', [])
 			    isHtml: true
 			  };
 
-			 //open the email prompt
-			 $cordovaEmailComposer.open(email).then(null, function () {
-			   // user cancelled email
-			 });
+			 
 	    }, function(err) {
 	      	// $log.error(err);
 	    });
+	};
+
+	$scope.sendPhoto = function(){
+    	console.log('send photo clicked! ', email);
+    	//open the email prompt
+		$cordovaEmailComposer.open(email).then(null, function () {
+		// user cancelled email
+		});
 	};
 }])
 .controller('AgentsCtrl',function($scope){
