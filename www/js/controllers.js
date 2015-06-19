@@ -19,14 +19,28 @@ angular.module('empire-services.controllers', [])
 .controller('ContactCtrl',function($scope){
 	
 })
-.controller('PhotoCtrl',['$scope','Camera','$log',function($scope,Camera,$log){
+.controller('PhotoCtrl',['$scope','Camera','$log','$cordovaEmailComposer',function($scope,Camera,$log,$cordovaEmailComposer){
 	$scope.getPhoto = function() {
 	    Camera.getPicture({
+	    	sourceType:1,		//camera
 			destinationType:1,	//file URI
 			saveToPhotoAlbum:false,
 			correctOrientation:true
 		}).then(function(imageURI) {
-			$scope.imageURI = imageURI;
+			var email = {
+			    to: 'mobile-receiver@empire-services.com',
+			    cc: 'mobile-receiver@empire-services.com',
+			    bcc: ['john@doe.com', 'jane@doe.com'],
+			    subject: 'Mobile App Photo',
+			    attachments: [imageURI],
+			    isHtml: true
+			  };
+
+			 //open the email prompt
+			 $cordovaEmailComposer.open(email).then(null, function () {
+			   // user cancelled email
+			 });
+
 	    }, function(err) {
 	    	$log.error(err);
 	    });
@@ -34,20 +48,27 @@ angular.module('empire-services.controllers', [])
 	  
 	$scope.selectPhoto = function(){
 		Camera.getPicture({
-			sourceType:2,		//photo album,
-			destinationType:2,  //base64
+			sourceType:0,		//photo album,
+			destinationType:1,  //file URI
 			saveToPhotoAlbum:false,
 			correctOrientation:true
-		}).then(function(imageData) {
-//	     	$scope.imageURI = imageURI;
-			$scope.imageData = "data:image/jpeg;base64," + imageData;
+		}).then(function(imageURI) {
+			var email = {
+			    to: 'mobile-receiver@empire-services.com',
+			    cc: 'mobile-receiver@empire-services.com',
+			    bcc: ['john@doe.com', 'jane@doe.com'],
+			    subject: 'Mobile App Photo',
+			    attachments: [imageURI],
+			    isHtml: true
+			  };
+
+			 //open the email prompt
+			 $cordovaEmailComposer.open(email).then(null, function () {
+			   // user cancelled email
+			 });
 	    }, function(err) {
-	      	$log.error(err);
+	      	// $log.error(err);
 	    });
-	};
-	
-	$scope.sendPhoto = function(){
-		
 	};
 }])
 .controller('AgentsCtrl',function($scope){

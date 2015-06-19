@@ -8,7 +8,7 @@
     	       Select Photo
     	    </button>
     	</div>
-      <img src="{{imageURI}}" style="max-width:100%"></img>
+      <img ng-src="{{imageURI}}" style="max-width:100%"></img>
 
       <button ng-if="imageURI != undefined" class="button button-block button-primary" ng-click="sendPhoto()">Send Photo</button>
   </ion-content>

@@ -1,11 +1,11 @@
 // Ionic Starter App
 
-angular.module('empire-services-mobile-app', ['ionic', 'empire-services.controllers','empire-services.services'])
+angular.module('empire-services-mobile-app', ['ionic', 'empire-services.controllers','empire-services.services','ngCordova'])
 
 .run(function($ionicPlatform) {
   //$cordovaStatusbar.hide();
   $ionicPlatform.ready(function() {
-    
+
   });
 })
 
