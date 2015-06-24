@@ -40,12 +40,12 @@ angular.module('empire-services-mobile-app', ['ionic', 'empire-services.controll
     
   })
   
-    .state('app.agents', {
-    url: "/agents",
+    .state('app.specialists', {
+    url: "/specialists",
     views: {
       'menuContent': {
-        templateUrl: "templates/agents.html",
-        controller:'AgentsCtrl'
+        templateUrl: "templates/specialists.html",
+        controller:'SpecialistsCtrl'
       }
     }
   })

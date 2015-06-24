@@ -93,29 +93,44 @@ angular.module('empire-services.controllers', [])
 		});
 	};
 }])
-.controller('AgentsCtrl',function($scope){
+.controller('SpecialistsCtrl',function($scope){
+
 	$scope.agents = [
 		{
-			name:'John Smith',
-			title:'Manager',
-			phone:'111-222-3333',
-			email:'john.smith@gmail.com',
-			photoUrl:'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png'
+			name:'Craig Spencer',
+			title:'Supervisor/Estimator',
+			phone:'1602-316-8356'
 		},
 		{
-			name:'Michelle Parker',
-			title:'Agent',
-			phone:'333-122-3333',
-			email:'michelle.parker@gmail.com',
-			photoUrl:'https://avatars3.githubusercontent.com/u/11214?v=3&s=460'
+			name:'Krista Spencer',
+			title:'Sales and Business Development',
+			phone:'602-616-6680'
 		},
 		{
-			name:'Derek Hall',
-			title:'Supervisor',
-			phone:'111-222-3333',
-			email:'derek.hall@gmail.com',
-			photoUrl:'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png'
-		}
+			name:'Laurie Williams',
+			title:'Office Manager',
+			phone:'623-414-8986'
+		},
+		{
+			name:'Andrew Pentland',
+			title:'Residential Project Manager',
+			phone:'480-438-3675'
+		},
+		{
+			name:'Keegan Barkley',
+			title:'Lead Technician',
+			phone:'515-302-1600'
+		},
+		{
+			name:'Floyd Carns',
+			title:'Owner/Commercial Mitigation Specialist',
+			phone:'480-570-7422'
+		},
+		{
+			name:'Bryan Bradley',
+			title:'Owner/Commercial Mitigation Specialist',
+			phone:'602-284-4959'
+		},
 	];
 })
 .controller('ImmediateActionCtrl', ['$scope','$state',function($scope,$state){
