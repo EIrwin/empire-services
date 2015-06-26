@@ -95,4 +95,19 @@
 .intro-text {
 	margin-top:20px;
 }
-
+ul.bullet-list {
+	list-style-type: disc;
+	margin-top:20px;
+}
+ul.bullet-list li {
+	margin-top:10px;
+	border-bottom: 1px solid #636363;
+	padding-bottom: 10px;
+}
+ul.bullet-list li:first-child {
+	border-top: 1px solid #636363;
+	padding-top:10px;
+}
+ul.bullet-list li:last-child {
+	border-bottom: none;
+}
