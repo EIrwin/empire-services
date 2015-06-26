@@ -89,4 +89,10 @@
 	position: absolute;
     top: 40%;
 }
+.start-text {
+	font-size:40px
+}
+.intro-text {
+	margin-top:20px;
+}
 
