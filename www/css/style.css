@@ -111,3 +111,7 @@ ul.bullet-list li:first-child {
 ul.bullet-list li:last-child {
 	border-bottom: none;
 }
+.send-photo {
+	font-size:170px;
+	color:#ccc;
+}

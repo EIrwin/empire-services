@@ -1,12 +1,12 @@
 <ion-view view-title="Photo">
   <ion-content style="margin:10px;" class="padding">
-	  	<ion-item>
-			<p>Please either take a new photo or select a photo from your gallery.  We will respond to your email as soon as possible.  Thank you.</p>
-	  	</ion-item>
-		<button class="button-positive button button-block" ng-click="getPhoto()" side="right">
+	  	<p class="text-center" ng-click="selectPhoto()">
+			<span class="ion-image send-photo"></span>
+	  	</p>
+		<button class="button-red button button-block" ng-click="getPhoto()" side="right">
 		   Take Photo
 		</button>
-		<button class="button-positive button button-block" ng-click="selectPhoto()" side="right">
+		<button class="button-red button button-block" ng-click="selectPhoto()" side="right">
 		   Select Photo
 		</button>
   </ion-content>
