@@ -1,14 +1,15 @@
 <ion-view view-title="Specialists">
   <ion-content style="margin:10px;">
     <ion-list>
-        <ion-item ng-repeat="agent in agents" class="item-remove-animate item-avatar item-icon-right card" href="#">
-          <h2>{{agent.name}}</h2>
-          <p>{{agent.title}}</p>
-          <p><a class="icon-left ion-ios7-telephone " 
-                ng-href="tel:{{agent.phone}}">{{agent.phone}}</a></p>
-          
-          <i class="icon ion-chevron-right icon-accessory"></i>
-        </ion-item>
+        <div class="card" ng-repeat="agent in agents">
+            <a class="item item-remove-animate item-icon-right item-text-wrap"  ng-href="tel:{{agent.phone}}">
+              <h2>{{agent.name}}</h2>
+              <p>{{agent.title}}</p>
+              <p><span class="icon-left ion-ios7-telephone ">{{agent.phone}}</span></p>
+
+              <i class="icon ion-chevron-right icon-accessory"></i>
+            </a>
+        </div>
     </ion-list>
   </ion-content>
 </ion-view>
