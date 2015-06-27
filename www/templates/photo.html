@@ -1,13 +1,17 @@
 <ion-view view-title="Photo">
   <ion-content style="margin:10px;" class="padding">
 	  	<p class="text-center" ng-click="selectPhoto()">
-			<span class="ion-image send-photo"></span>
+			<span class="ion-image send-photo" ng-if="imageURI == undefined"></span>
+			<img ng-if="imageURI != undefined" ng-src="{{imageURI}}"></img>
 	  	</p>
 		<button class="button-red button button-block" ng-click="getPhoto()" side="right">
 		   Take Photo
 		</button>
 		<button class="button-red button button-block" ng-click="selectPhoto()" side="right">
 		   Select Photo
+		</button>
+		<button ng-if="imageURI != undefined" class="button-blue button button-block" ng-click="sendPhoto(imageURI)" side="right">
+		   Send Photo
 		</button>
   </ion-content>
 </ion-view>

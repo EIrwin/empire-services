@@ -43,22 +43,22 @@ angular.module('empire-services.controllers', [])
 			correctOrientation:true
 		}).then(function(imageURI) {
 			$scope.imageURI = imageURI;
+			alert(imageURI);
 			email = {
 			    to: 'mobile-receiver@empire-services.com',
 			    cc: 'mobile-receiver@empire-services.com',
-			    bcc: ['john@doe.com', 'jane@doe.com'],
 			    subject: 'Mobile App Photo',
 			    attachments: [imageURI],
 			    isHtml: true
 			  };
 
-			 //open the email prompt
-			 $cordovaEmailComposer.open(email).then(null, function () {
-			   // user cancelled email
-			   $log.info('User cancelled email composition');
-			 });
+			 // //open the email prompt
+			 // $cordovaEmailComposer.open(email).then(null, function () {
+			 //   // user cancelled email
+			 //   $log.info('User cancelled email composition');
+			 // });
 	    }, function(err) {
-	    	$log.error(err);
+	    	alert('An error has occured');
 	    });
 	  };
 	  
@@ -69,18 +69,25 @@ angular.module('empire-services.controllers', [])
 			saveToPhotoAlbum:false,
 			correctOrientation:true
 		}).then(function(imageURI) {
+			alert(imageURI);
 			$scope.imageURI = imageURI;
 			email = {
 			    to: 'mobile-receiver@empire-services.com',
 			    cc: 'mobile-receiver@empire-services.com',
-			    bcc: ['john@doe.com', 'jane@doe.com'],
 			    subject: 'Mobile App Photo',
 			    attachments: [imageURI],
 			    isHtml: true
 			  };
 
+			  			 //open the email prompt
+			 // $cordovaEmailComposer.open(email).then(null, function () {
+			 //   // user cancelled email
+			 //   $log.info('User cancelled email composition');
+			 // });
+
 			 
 	    }, function(err) {
+	    	alert('An error has occured');
 	      	// $log.error(err);
 	    });
 	};
