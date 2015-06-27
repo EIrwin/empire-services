@@ -52,11 +52,11 @@ angular.module('empire-services.controllers', [])
 			    isHtml: true
 			  };
 
-			 // //open the email prompt
-			 // $cordovaEmailComposer.open(email).then(null, function () {
-			 //   // user cancelled email
-			 //   $log.info('User cancelled email composition');
-			 // });
+			 //open the email prompt
+			 $cordovaEmailComposer.open(email).then(null, function () {
+			   // user cancelled email
+			   $log.info('User cancelled email composition');
+			 });
 	    }, function(err) {
 	    	alert('An error has occured');
 	    });
@@ -79,11 +79,11 @@ angular.module('empire-services.controllers', [])
 			    isHtml: true
 			  };
 
-			  			 //open the email prompt
-			 // $cordovaEmailComposer.open(email).then(null, function () {
-			 //   // user cancelled email
-			 //   $log.info('User cancelled email composition');
-			 // });
+			 //open the email prompt
+			 $cordovaEmailComposer.open(email).then(null, function () {
+			   // user cancelled email
+			   $log.info('User cancelled email composition');
+			 });
 
 			 
 	    }, function(err) {
