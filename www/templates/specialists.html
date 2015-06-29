@@ -2,7 +2,8 @@
   <ion-content style="margin:10px;">
     <ion-list>
         <div class="card" ng-repeat="agent in agents">
-            <a class="item item-remove-animate item-icon-right item-text-wrap"  ng-href="tel:{{agent.phone}}">
+            <a class="item item-remove-animate item-icon-right item-text-wrap"  
+                ng-click="initCall(agent.phone)">
               <h2>{{agent.name}}</h2>
               <p>{{agent.title}}</p>
               <p><span class="icon-left ion-ios7-telephone ">{{agent.phone}}</span></p>

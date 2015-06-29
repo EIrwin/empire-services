@@ -28,6 +28,10 @@ angular.module('empire-services.controllers', [])
 		   $log.info('User cancelled email composition');
 		 });
 	}
+
+	$scope.initCall = function(number){
+		window.open('tel:' + number, '_system')
+	}
 }])
 .controller('HomeCtrl',['$scope','$state','$log',function($scope,$state,$log) {
 	$log.info('HomeCtrl loaded');
@@ -43,7 +47,6 @@ angular.module('empire-services.controllers', [])
 			correctOrientation:true
 		}).then(function(imageURI) {
 			$scope.imageURI = imageURI;
-			alert(imageURI);
 			email = {
 			    to: 'mobile-receiver@empire-services.com',
 			    cc: 'mobile-receiver@empire-services.com',
@@ -69,7 +72,6 @@ angular.module('empire-services.controllers', [])
 			saveToPhotoAlbum:false,
 			correctOrientation:true
 		}).then(function(imageURI) {
-			alert(imageURI);
 			$scope.imageURI = imageURI;
 			email = {
 			    to: 'mobile-receiver@empire-services.com',
