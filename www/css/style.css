@@ -98,6 +98,7 @@
 ul.bullet-list {
 	list-style-type: disc;
 	margin-top:20px;
+	color:#3ca9d6;
 }
 ul.bullet-list li {
 	margin-top:10px;
