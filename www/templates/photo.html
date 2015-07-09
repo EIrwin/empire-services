@@ -10,6 +10,9 @@
 		<button class="button-red button button-block" ng-click="selectPhoto()" side="right">
 		   Select Photo
 		</button>
+		<label class="item item-input">
+		    <input type="text" placeholder="Comments" ng-model="model.comments">
+		  </label>
 		<button ng-if="imageURI != undefined" class="button-blue button button-block" ng-click="sendPhoto(imageURI)" side="right">
 		   Send Photo
 		</button>

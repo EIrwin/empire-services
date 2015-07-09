@@ -38,6 +38,10 @@ angular.module('empire-services.controllers', [])
 }])
 .controller('PhotoCtrl',['$scope','Camera','$log','$cordovaEmailComposer',function($scope,Camera,$log,$cordovaEmailComposer){
 
+	var model = {
+		comments: ""
+	};
+	$scope.model = model;
 	var email;
 	$scope.getPhoto = function() {
 	    Camera.getPicture({
@@ -50,7 +54,7 @@ angular.module('empire-services.controllers', [])
 			email = {
 			    to: 'mobile-receiver@empire-services.com',
 			    cc: 'mobile-receiver@empire-services.com',
-			    subject: 'Mobile App Photo',
+			    subject: 'Mobile App Photo:' + $scope.model.comments,
 			    attachments: [imageURI],
 			    isHtml: true
 			  };
