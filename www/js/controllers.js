@@ -36,11 +36,18 @@ angular.module('empire-services.controllers', [])
 .controller('HomeCtrl',['$scope','$state','$log',function($scope,$state,$log) {
 	$log.info('HomeCtrl loaded');
 }])
-.controller('PhotoCtrl',['$scope','Camera','$log','$cordovaEmailComposer',function($scope,Camera,$log,$cordovaEmailComposer){
+.controller('PhotoCtrl',['$scope','Camera','$log','$cordovaEmailComposer','$stateParams','$state',
+	function($scope,Camera,$log,$cordovaEmailComposer,$stateParams,$state){
 
 	var model = {
-		comments: ""
+		comments: ''
 	};
+
+	if($stateParams.actionType != undefined){
+		model.comments = 'Requesting service for ' + $stateParams.actionType + ' damage.'
+	}
+
+
 	$scope.model = model;
 	var email;
 	$scope.getPhoto = function() {
@@ -59,11 +66,11 @@ angular.module('empire-services.controllers', [])
 			    isHtml: true
 			  };
 
-			 //open the email prompt
-			 $cordovaEmailComposer.open(email).then(null, function () {
-			   // user cancelled email
-			   $log.info('User cancelled email composition');
-			 });
+			 // //open the email prompt
+			 // $cordovaEmailComposer.open(email).then(null, function () {
+			 //   // user cancelled email
+			 //   $log.info('User cancelled email composition');
+			 // });
 	    }, function(err) {
 	    	alert('An error has occured');
 	    });
@@ -72,24 +79,29 @@ angular.module('empire-services.controllers', [])
 	$scope.selectPhoto = function(){
 		Camera.getPicture({
 			sourceType:0,		//photo album,
-			destinationType:1,  //file URI
+			encodingType:0,	//png
+			destinationType:0,  //Data URI
 			saveToPhotoAlbum:false,
-			correctOrientation:true
-		}).then(function(imageURI) {
-			$scope.imageURI = imageURI;
-			email = {
-			    to: 'mobile-receiver@empire-services.com',
-			    cc: 'mobile-receiver@empire-services.com',
-			    subject: 'Mobile App Photo',
-			    attachments: [imageURI],
-			    isHtml: true
-			  };
+			correctOrientation:true,
+			quality:75
+		}).then(function(imageData) {
+				$scope.imageData = "data:image/jpeg;base64, " + imageData;
+				// var image = document.getElementById('myImage');
+				// image.src = "data:image/png;base64," + imageData;
 
-			 //open the email prompt
-			 $cordovaEmailComposer.open(email).then(null, function () {
-			   // user cancelled email
-			   $log.info('User cancelled email composition');
-			 });
+			// email = {
+			//     to: 'mobile-receiver@empire-services.com',
+			//     cc: 'mobile-receiver@empire-services.com',
+			//     subject: 'Mobile App Photo',
+			//     attachments: [imageURI],
+			//     isHtml: true
+			//   };
+
+			 // //open the email prompt
+			 // $cordovaEmailComposer.open(email).then(null, function () {
+			 //   // user cancelled email
+			 //   $log.info('User cancelled email composition');
+			 // });
 
 			 
 	    }, function(err) {
@@ -155,7 +167,11 @@ angular.module('empire-services.controllers', [])
 	};
 	
 }])
-.controller('ImmediateActionDetailCtrl',['$scope','$stateParams',function($scope,$stateParams){
+.controller('ImmediateActionDetailCtrl',['$scope','$stateParams','$state',function($scope,$stateParams,$state){
 	$scope.actionType = $stateParams.id;
+
+	$scope.requestService = function(actionType){
+		$state.go('app.photo', {actionType:actionType});
+	}
 }]);
 

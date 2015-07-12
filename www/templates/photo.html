@@ -3,6 +3,12 @@
 	  	<p class="text-center" ng-click="selectPhoto()">
 			<span class="ion-image send-photo" ng-if="imageURI == undefined"></span>
 			<img ng-if="imageURI != undefined" ng-src="{{imageURI}}"></img>
+			<!-- <img ng-if="imageData != undefined" width="100" height="100" id="myImage"></img> -->
+			<!-- <img ng-if="imageData != undefined" width="100" height="100" src="data:image/png;base64,{{imageData}}"></img> -->
+			<!-- <img ng-if="imageData != undefined" width="100" height="100" ng-src="data:image/png;base64,{{imageData}}"></img> -->
+			<img ng-if="imageData != undefined" width="100" height="100" data-ng-src="{{imageData}}"></img>
+			<img ng-if="imageData != undefined" width="100" height="100" ng-src="{{imageData}}"></img>
+			<img ng-if="imageData != undefined" width="100" height="100" src="{{imageData}}"></img>
 	  	</p>
 		<button class="button-red button button-block" ng-click="getPhoto()" side="right">
 		   Take Photo
