@@ -82,7 +82,7 @@ angular.module('empire-services-mobile-app', ['ionic', 'empire-services.controll
   
   
   .state('app.photo', {
-    url: "/photo",
+    url: "/photo?actionType",
     views: {
       'menuContent': {
         templateUrl: "templates/photo.html",
