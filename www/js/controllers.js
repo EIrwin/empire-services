@@ -79,13 +79,14 @@ angular.module('empire-services.controllers', [])
 	$scope.selectPhoto = function(){
 		Camera.getPicture({
 			sourceType:0,		//photo album,
-			encodingType:0,	//png
 			destinationType:0,  //Data URI
 			saveToPhotoAlbum:false,
 			correctOrientation:true,
+			mediaType:0,
 			quality:75
 		}).then(function(imageData) {
-				$scope.imageData = "data:image/jpeg;base64, " + imageData;
+				//$scope.imageData = "data:image/jpeg;base64, " + imageData;
+				$scope.imageData = imageData;
 				// var image = document.getElementById('myImage');
 				// image.src = "data:image/png;base64," + imageData;
 
