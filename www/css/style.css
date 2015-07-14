@@ -25,9 +25,8 @@
       box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1); }
 
 .logo {
-	background: -image: url(../img/empire_services_west.png);
+	background: url(../img/empire_services_west.png) no-repeat;
 	background-size: cover;
-	background-repeat: no-repeat;
 	text-align: center;
 }
 
@@ -105,16 +104,30 @@
 ul.bullet-list {
 	list-style-type: disc;
 	margin-top:20px;
-	color:#3ca9d6;
+}
+ul.bullet-list.dos{
+	color:#43a541;
+	font-size: 20px;
+}
+ul.bullet-list.donts {
+	color: #b11818;
+	font-size: 20px;
+}
+.large {
+	clear: both;
+	display: block;
+	font-size: 35px;
+	margin-bottom:10px;
 }
 ul.bullet-list li {
-	margin-top:10px;
-	border-bottom: 1px solid #636363;
-	padding-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 ul.bullet-list li:first-child {
-	border-top: 1px solid #636363;
-	padding-top:10px;
+	border-top: 1px solid #ccc;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 ul.bullet-list li:last-child {
 	border-bottom: none;
@@ -122,4 +135,7 @@ ul.bullet-list li:last-child {
 .send-photo {
 	font-size:170px;
 	color:#ccc;
+}
+h2.dodont {
+	font-size: 45px;
 }

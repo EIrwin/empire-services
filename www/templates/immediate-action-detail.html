@@ -4,81 +4,51 @@
     
     <!-- Water Damage-->
     <div ng-if="actionType == 'water'">
-      <h2>Water</h2>
+      <h2 class="dodont">Water</h2>
 
-      <h4>Do’s and Don’ts:</h4>
+      <button class="button-red button button-block" ng-click="requestService(actionType)" side="right">
+        REQUEST SERVICE
+      </button>
 
-      <ul class="bullet-list">
-        <li>Do Stop the water flow if possible. If necessary hire a qualified person to assist you to make the repairs. Keep any parts that are replaced for your insurance company inspection.</li>
+      <ul class="bullet-list dos">
+        <li><span class="large">DO</span> Stop the water flow if possible. (Turn off water at main hub if you are unsure where the water is comping from)</li>
 
-        <li>If safe to do so, turn off circuit breakers supplying electricity to wet areas and remove any small electronic devises from those areas.</li>
+        <li><span class="large">DO</span> Turn off circuit breakers supplying electricity to wet areas.</li>
 
-        <li>If you have an Emergency Response service provider, call them immediately.</li>
+        <li><span class="large">DO</span> Call your PREP Contractor</li>
+      </ul>
 
-        <li>Do Remove small furniture items to minimize stains or rust and to speed up the drying process.</li>
+      <ul class="bullet-list donts">
+        <li><span class="large">DO NOT</span> Enter rooms with standing water if the electricity is still on.</li>
 
-        <li>Do Place small wood blocks or aluminum foil under legs of furniture that cannot be moved.</li>
+        <li><span class="large">DO NOT</span> Use a shop vacuum to remove the water.  It can cause damage to the vacuum and may result in electric shock to the user.</li>
 
-        <li>Do Prop up wet furniture cushions for even drying.</li>
-
-        <li>Do Wipe down furniture that is wet with a dry cloth or towel. Lift draperies off carpet, loop through a coat hanger, and place the hanger on the drapery rod.</li>
-
-        <li>Do Remove wet area rugs to a dry area.</li>
-
-        <li>Do Remove breakables, moisture sensitive and high value items, books, paper goods, waste bins, potted plants, and any other items that may stain floor coverings.</li>
-
-        <li>Do Remember to check under desks, for small item that could be damaged.</li>
-
-        <li>Do Plan for restoration crews to move furniture into unaffected dry areas.</li>
-
-        <li>Do Make sure you and your employees practice good personal hygiene after handling affected items.</li>
-
-        <li>Do not enter rooms with standing water if the electricity is still on.</li>
-
-        <li>Do not use computers and outlets while in wet areas.</li>
-
-        <li>Do not use a shop vacuum to remove the water. It can cause damage to the vacuum and may result in electric shock to the user.</li>
-
-        <li>Do not attempt to clean up contaminated (sewer) water.</li>
-
-        <li>Do not turn on fans, heating or air conditioning units if water is sewage related as they may spread contamination.</li>
-
-        <li>Do not walk on wet surfaces any more than necessary in order to minimize safety hazards and to keep from spreading damage and possible contaminates.</li>
+        <li><span class="large">DO NOT</span> attempt to clean up contaminated (sewer) water.</li>
       </ul>
 
     </div>
     
     <!-- Mold Damage-->
     <div ng-if="actionType == 'mold'">
-      <h2>Mold</h2>
+      <h2 class="dodont">Mold</h2>
 
-      <h4>Do’s and Don’t’s:</h4>
+      <button class="button-red button button-block" ng-click="requestService(actionType)" side="right">
+        REQUEST SERVICE
+      </button>
 
-      <p>Mold is an on-going concern and should not be taken lightly. In fact, if you should discover mold in
-         your home or office, be sure to take the discovery serious. It can have an adverse effect on your health.
-         Below is a list of the things you should Do to help you deal with your indoor mold infestation.</p>
+      <em>Mold is an on-going concern and should not be taken lightly.  In fact, if you should discover mold in your home or office, be sure to take the discovery serious.  It can have an adverse effect on your health.  Below is a list of the things you should Do to help you deal with your indoor mold infestation. </em>
 
-      <ul class="bullet-list">
+      <ul class="bullet-list dos">
+        <li><span class="large">DO</span> Call your certified Mold removal and remediation professional, to get an assessment of the mold issues.</li>
+      </ul>
 
-        <li>Do wear a respirator with P100 HEPA Filtration cartridges</li>
+      <ul class="bullet-list donts">
 
-        <li>Do wear Gloves</li>
+        <li><span class="large">DO NOT</span> place fans on mold thinking it will go away.  When you blow air onto mold, infested areas disperse tiny spores into the air affecting air quality.</li>
 
-        <li>Do put up a containment with plastic sheeting to avoid the spread of spores.</li>
+        <li><span class="large">DO NOT</span> try to kill the mold.  Dead mold spores are just as harmful to the human lungs are living mold spores.</li>
 
-        <li>Do use a HEPA Vacuum</li>
-
-        <li>Do call a certified Mold removal and remediation professional, to get an assessment of the mold issues.</li>
-
-        <li>Do have a negative air pressure.</li>
-
-        <li>Do not think you are tougher that mold and it cannot hurt you. Mold is an airborne pathogen, no matter how tough you think you are, mold is tougher on your health.</li>
-
-        <li>Do not place fans on mold thinking it will go away. When you blow air onto mold, infested areas disperse tiny spores into the air affecting air quality.</li>
-
-        <li>Do not try to kill the mold. Dead mold spores are just as harmful to the human lungs are living mold spores.</li>
-
-        <li>Do not spray bleach or any other chemicals on the mold because this will cause the mold to disperse its spores.</li>
+        <li><span class="large">DO NOT</span> spray bleach or any other chemicals on the mold because this will cause the mold to disperse its spores.</li>
 
       </ul>
     </div>
@@ -86,45 +56,26 @@
     <!-- Storm Damage-->
     <div ng-if="actionType == 'storm'">
 
-      <h2>Storm</h2>
+      <h2 class="dodont">Storm</h2>
 
-      <h4>Do's and Don'ts</h4>
+      <button class="button-red button button-block" ng-click="requestService(actionType)" side="right">
+        REQUEST SERVICE
+      </button>
 
-        <ul class="bullet-list">
+        <ul class="bullet-list dos">
 
-          <li>Do make sure you are covered for Storm Damage with your insurance agent before Storm season hits us.</li>
+          <li><span class="large">DO</span> Cover any opening to the dwelling and take any necessary measures to diminish damages to your property and contents.</li>
 
-          <li>Do make sure you have replacement cost value (RCV),or you will only have actual Cash Value.</li>
+          <li><span class="large">DO</span> Make sure to photograph and or video all damages and content for your insurance adjuster.</li>
 
-          <li>Do make sure you are covered for Reasonable repairs.</li>
+        </ul>
+        <ul class="bullet-list donts">
 
-          <li>Report claim timely and accurately.</li>
+          <li><span class="large">DO NOT</span> Try and remove any trees or damaged building materials.</li>
 
-          <li>Do inspect Trees and exterior of your home for damage, if it is safe to do so.</li>
+          <li><span class="large">DO NOT</span> Dismiss apparent "minor" damage. Always have damage inspected by appropriate professional.</li>
 
-          <li>Do Cover any opening to the dwelling and take any necessary measures to diminish damages to your property and contents.</li>
-
-          <li>Do make sure to photograph and or video all damages and content for your insurance adjuster.</li>
-
-          <li>Do make sure to exhibit your property for inspection.</li>
-
-          <li>Failure to cooperate with your adjuster, can result in a claim denial.</li>
-
-          <li>Don’t try and remove any trees or damaged building materials.</li>
-
-          <li>DO inspect your roof regularly before any issues arise. If, after a large storm, you notice the sudden emergence of several dozen dings and dents, you've got hail damage, but it's hard to know what's normal wear and what's serious enough to make a claim if you have no frame of reference.</li>
-
-          <li>DO remember to make a claim. It's easy to forget that paying insurance premiums entitles you to make a claim when something goes wrong.</li>
-
-          <li>DON'T dismiss apparent "minor" damage. Shingles that have suffered extensive hail damage look a lot like normal shingles. It might just look like notching around the edges of shingles, but that probably means there are holes in the shingles that will allow water to slip by.</li>
-
-          <li>DO use a roofing company with experience handling insurance claims. Every industry has its own jargon, including insurance and roofing. Finding a roofer that can effectively communicate with your insurance company directly save a step in the repair process.</li>
-
-          <li>DO ask for a storm damage inspection. Roofing experts look at roofs all day, they're going to see things most people would miss. They'll be able to highlight any damage your roof has suffered, which will help you make a more complete claim.</li>
-
-          <li>DON'T use fly by night roofers. An increasingly common tactic amongst less reputable members of the home improvement industry is chasing storms around the country in the hopes that homes will be damaged severely enough to warrant a claims-based repair. Because these companies haven't put down roots in the community they're working in, it's hard to enforce a warranty or guarantee.</li>
-
-          <li>What is the term of your insurance? Is my limit sufficient enough considering Mortgage and cost to rebuild? Does my insurance cover damages, and to what extent? Make sure to take photos of your valuables before anything happens. Do a thorough Video walk through of your home. Save all warranty paperwork or proof of purchases for emergencies.</li>
+          <li><span class="large">DO NOT</span> Use out of state “Storm chasers” Because these companies haven't put down roots in the community they're working in, it's hard to enforce a warranty or guarantee.</li>
 
         </ul>
 
@@ -133,47 +84,32 @@
     <!-- Fire Damage-->
     <div ng-if="actionType == 'fire'">
 
-      <h2>Fire</h2>
+      <h2 class="dodont">Fire</h2>
 
-      <h4>Do's and Don'ts</h4>
+      <button class="button-red button button-block" ng-click="requestService(actionType)" side="right">
+        REQUEST SERVICE
+      </button>
 
-      <ul class="bullet-list">
+      <ul class="bullet-list dos">
 
-        <li>Do Blow off or brush-vacuum loose soot particles from upholstery, drapes, and carpets.</li>
+        <li><span class="large">DO</span> Call 911</li>
 
-        <li>Do Cover carpeted traffic areas with old towels or linens to prevent additional soiling.</li>
+        <li><span class="large">DO</span> Call your PREP Contractor</li>
 
-        <li>Do Discard open food packaging and itemize for insurance.</li>
+        <li><span class="large">DO</span> Call your Insurance Company</li>
 
-        <li>Do Send clothing to heavy smoke damage cleaners, or a professional restorer. (odors can be very difficult to remove)</li>
+      </ul>
+      <ul class="bullet-list donts">
 
-        <li>Do Clean formica or Chrome fixtures in Kitchens and bathrooms to prevent permanent tarnishing.</li>
+        <li><span class="large">DO NOT</span> Re-enter building, unless cleared by Fire department first</li>
 
-        <li>Do Wipe residue from porcelain bath fixtures to prevent etching.</li>
-
-        <li>Do Tape cheese cloth over intake and outlet air registers to capture any loose soot in air.</li>
-
-        <li>Do clean out freezer or refrigerators and leave doors propped open.</li>
-
-        <li>Do not attempt to wash any papered or flat painted walls without consulting your professional cleaner. Incorrect cleaning procedures could compound the problem-resulting in a paint job where one could have been avoided.</li>
-
-        <li>Do not attempt to clean carpets and or upholstered furniture.</li>
-
-        <li>Do not use electrical appliances that have been close to the fire or water before checking them.</li>
-
-        <li>Do not use ceiling fixtures if the ceiling is wet.</li>
-
-        <li>Do not touch anything-soot or oil residue from your hands can permanently stain surfaces or set permanent damage.</li>
-
-        <li>Do not eat food that has been exposed to fire or smoke damage.</li>
+        <li><span class="large">DO NOT</span> Try to save belongings, Contents, Food, Personal hygiene products. (May be contaminated)</li>
 
       </ul>
 
     </div>
 
-    <button class="button-red button button-block" ng-click="requestService(actionType)" side="right">
-       REQUEST SERVICE
-    </button>
+
 
   </ion-content>
 </ion-view>
