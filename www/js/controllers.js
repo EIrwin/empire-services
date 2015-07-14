@@ -82,11 +82,12 @@ angular.module('empire-services.controllers', [])
 			destinationType:0,  //Data URI
 			saveToPhotoAlbum:false,
 			correctOrientation:true,
-			mediaType:0,
+			//mediaType:0,
 			quality:75
 		}).then(function(imageData) {
 				//$scope.imageData = "data:image/jpeg;base64, " + imageData;
-				$scope.imageData = imageData;
+				$scope.imageData = "data:image/jpeg;base64," + imageData;
+				console.log('scope.imageData: ', $scope.imageData);
 				// var image = document.getElementById('myImage');
 				// image.src = "data:image/png;base64," + imageData;
 
@@ -110,6 +111,7 @@ angular.module('empire-services.controllers', [])
 	      	// $log.error(err);
 	    });
 	};
+
 
 	$scope.sendPhoto = function(){
     	console.log('send photo clicked! ', email);

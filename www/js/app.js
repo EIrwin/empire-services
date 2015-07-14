@@ -9,7 +9,10 @@ angular.module('empire-services-mobile-app', ['ionic', 'empire-services.controll
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $compileProvider) {
+
+  $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|file|blob|cdvfile|content):|data:image\//);
+  
   $stateProvider
 
   .state('app', {
