@@ -24,6 +24,13 @@
       background-color: #b53035;
       box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1); }
 
+.logo {
+	background: -image: url(../img/empire_services_west.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
 /* HOME */
 .home {
 	background-image: url(../img/homebg.jpg);
