@@ -53,24 +53,20 @@ angular.module('empire-services.controllers', [])
 	$scope.getPhoto = function() {
 	    Camera.getPicture({
 	    	sourceType:1,		//camera
-			destinationType:1,	//file URI
+			destinationType:0,	//Data URI
 			saveToPhotoAlbum:false,
 			correctOrientation:true
-		}).then(function(imageURI) {
-			$scope.imageURI = imageURI;
+		}).then(function(imageData) {
+			var data = "data:image/jpeg;base64," + imageData;
+			$scope.imageData = data;
+
 			email = {
 			    to: 'mobile-receiver@empire-services.com',
 			    cc: 'mobile-receiver@empire-services.com',
-			    subject: 'Mobile App Photo:' + $scope.model.comments,
-			    attachments: [imageURI],
+			    subject: 'Mobile App Photo',
+			    attachments: 'base64:image.jpeg//' + imageData,
 			    isHtml: true
 			  };
-
-			 // //open the email prompt
-			 // $cordovaEmailComposer.open(email).then(null, function () {
-			 //   // user cancelled email
-			 //   $log.info('User cancelled email composition');
-			 // });
 	    }, function(err) {
 	    	alert('An error has occured');
 	    });
@@ -82,43 +78,33 @@ angular.module('empire-services.controllers', [])
 			destinationType:0,  //Data URI
 			saveToPhotoAlbum:false,
 			correctOrientation:true,
-			//mediaType:0,
-			quality:75
 		}).then(function(imageData) {
-				//$scope.imageData = "data:image/jpeg;base64, " + imageData;
-				$scope.imageData = "data:image/jpeg;base64," + imageData;
-				console.log('scope.imageData: ', $scope.imageData);
-				// var image = document.getElementById('myImage');
-				// image.src = "data:image/png;base64," + imageData;
+			var data = "data:image/jpeg;base64, " + imageData;
+			$scope.imageData = data;
 
-			// email = {
-			//     to: 'mobile-receiver@empire-services.com',
-			//     cc: 'mobile-receiver@empire-services.com',
-			//     subject: 'Mobile App Photo',
-			//     attachments: [imageURI],
-			//     isHtml: true
-			//   };
-
-			 // //open the email prompt
-			 // $cordovaEmailComposer.open(email).then(null, function () {
-			 //   // user cancelled email
-			 //   $log.info('User cancelled email composition');
-			 // });
-
-			 
+			email = {
+			    to: 'mobile-receiver@empire-services.com',
+			    cc: 'mobile-receiver@empire-services.com',
+			    subject: 'Mobile App Photo',
+			    attachments: 'base64:image.jpeg//' + imageData,
+			    isHtml: true
+			  };		 
 	    }, function(err) {
-	    	alert('An error has occured');
-	      	// $log.error(err);
+	    	alert(err);
 	    });
 	};
 
 
 	$scope.sendPhoto = function(){
-    	console.log('send photo clicked! ', email);
-    	//open the email prompt
-		$cordovaEmailComposer.open(email).then(null, function () {
-		// user cancelled email
-		});
+
+		email.body = '<p>' + $scope.model.comments + '</p>';
+		if(email != null){
+			$cordovaEmailComposer.open(email).then(null, function () {
+				// user cancelled email
+			});
+		}else{
+			alert('An error has occured');
+		}
 	};
 }])
 .controller('SpecialistsCtrl',function($scope){
