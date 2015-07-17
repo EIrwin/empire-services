@@ -139,3 +139,13 @@ ul.bullet-list li:last-child {
 h2.dodont {
 	font-size: 45px;
 }
+.specialist {
+	background:#822428;
+}
+.specialist a {
+	text-decoration: none;
+	color:#000;
+}
+.specialist .icon {
+	color:#dd385f;
+}
