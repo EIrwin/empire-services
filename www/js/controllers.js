@@ -71,7 +71,7 @@ angular.module('empire-services.controllers', [])
 	    	alert('An error has occured');
 	    });
 	  };
-	  
+
 	$scope.selectPhoto = function(){
 		Camera.getPicture({
 			sourceType:0,		//photo album,
@@ -88,7 +88,7 @@ angular.module('empire-services.controllers', [])
 			    subject: 'Mobile App Photo',
 			    attachments: 'base64:image.jpeg//' + imageData,
 			    isHtml: true
-			  };		 
+			  };
 	    }, function(err) {
 	    	alert(err);
 	    });
@@ -110,43 +110,41 @@ angular.module('empire-services.controllers', [])
 .controller('SpecialistsCtrl',function($scope){
 
 	$scope.agents = [
-		{
-			name: 'Andrew Pentland',
-			title: 'Residential Project Manager',
-			phone:'480-438-3675'
-		},
+    {
+      name:'Keegan Barkley',
+      title:'Lead Technician',
+      phone:'515-302-1600'
+    },
 		{
 			name:'Bryan Bradley',
 			title:'Owner/Commercial Mitigation Specialist',
 			phone:'602-284-4959'
 		},
+    {
+      name:'Floyd Carns',
+      title:'Owner/Commercial Mitigation Specialist',
+      phone:'480-570-7422'
+    },
 		{
 			name:'Craig Spencer',
 			title:'Supervisor/Estimator',
 			phone:'602-316-8356'
 		},
 		{
-			name:'Floyd Carns',
-			title:'Owner/Commercial Mitigation Specialist',
-			phone:'480-570-7422'
-		},
-		{
-			name:'Keegan Barkley',
-			title:'Lead Technician',
-			phone:'515-302-1600'
-		},
-		{
 			name:'Krista Spencer',
 			title:'Sales and Business Development',
 			phone:'602-616-6680'
 		},
+    {
+      name: 'Andrew Pentland',
+      title:'Residential Project Manager',
+      phone:'480-438-3675'
+    },
 		{
 			name:'Laurie Williams',
 			title:'Office Manager',
 			phone:'623-414-8986'
 		}
-
-
 	];
 })
 .controller('ImmediateActionCtrl', ['$scope','$state',function($scope,$state){
@@ -156,7 +154,7 @@ angular.module('empire-services.controllers', [])
 	$scope.goToState = function(param){
 		$state.go('app.immediate-action.details', {id : param});
 	};
-	
+
 }])
 .controller('ImmediateActionDetailCtrl',['$scope','$stateParams','$state',function($scope,$stateParams,$state){
 	$scope.actionType = $stateParams.id;
@@ -165,4 +163,3 @@ angular.module('empire-services.controllers', [])
 		$state.go('app.photo', {actionType:actionType});
 	}
 }]);
-
