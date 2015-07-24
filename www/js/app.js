@@ -1,14 +1,18 @@
 // Ionic Starter App
 
-angular.module('empire-services-mobile-app', ['ionic', 'empire-services.controllers','empire-services.services'])
+angular.module('empire-services-mobile-app', ['ionic', 'empire-services.controllers','empire-services.services','ngCordova'])
 
 .run(function($ionicPlatform) {
+  //$cordovaStatusbar.hide();
   $ionicPlatform.ready(function() {
 
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, $compileProvider) {
+
+  $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|file|blob|cdvfile|content):|data:image\//);
+  
   $stateProvider
 
   .state('app', {
@@ -39,12 +43,12 @@ angular.module('empire-services-mobile-app', ['ionic', 'empire-services.controll
     
   })
   
-    .state('app.agents', {
-    url: "/agents",
+    .state('app.specialists', {
+    url: "/specialists",
     views: {
       'menuContent': {
-        templateUrl: "templates/agents.html",
-        controller:'AgentsCtrl'
+        templateUrl: "templates/specialists.html",
+        controller:'SpecialistsCtrl'
       }
     }
   })
@@ -76,8 +80,18 @@ angular.module('empire-services-mobile-app', ['ionic', 'empire-services.controll
         templateUrl: "templates/immediate-action-detail.html",
         controller:'ImmediateActionDetailCtrl'
       }
-    },
-    
+    }, 
+  })
+  
+  
+  .state('app.photo', {
+    url: "/photo?actionType",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/photo.html",
+        controller:'PhotoCtrl'
+      }
+    }
   });
   
   // if none of the above states are matched, use this as the fallback

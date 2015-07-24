@@ -1,6 +1,115 @@
-<ion-view view-title="{{title}}">
+<ion-view view-title="{{actionType|uppercase }}">
   <ion-content style="margin:10px;">
     <!--Conditionally show sections based on type-->
-    test
+    
+    <!-- Water Damage-->
+    <div ng-if="actionType == 'water'">
+      <h2 class="dodont">Water</h2>
+
+      <button class="button-red button button-block" ng-click="requestService(actionType)" side="right">
+        REQUEST SERVICE
+      </button>
+
+      <ul class="bullet-list dos">
+        <li><span class="large">DO</span> Stop the water flow if possible. (Turn off water at main hub if you are unsure where the water is comping from)</li>
+
+        <li><span class="large">DO</span> Turn off circuit breakers supplying electricity to wet areas.</li>
+
+        <li><span class="large">DO</span> Call your PREP Contractor</li>
+      </ul>
+
+      <ul class="bullet-list donts">
+        <li><span class="large">DO NOT</span> Enter rooms with standing water if the electricity is still on.</li>
+
+        <li><span class="large">DO NOT</span> Use a shop vacuum to remove the water.  It can cause damage to the vacuum and may result in electric shock to the user.</li>
+
+        <li><span class="large">DO NOT</span> attempt to clean up contaminated (sewer) water.</li>
+      </ul>
+
+    </div>
+    
+    <!-- Mold Damage-->
+    <div ng-if="actionType == 'mold'">
+      <h2 class="dodont">Mold</h2>
+
+      <button class="button-red button button-block" ng-click="requestService(actionType)" side="right">
+        REQUEST SERVICE
+      </button>
+
+      <em>Mold is an on-going concern and should not be taken lightly.  In fact, if you should discover mold in your home or office, be sure to take the discovery serious.  It can have an adverse effect on your health.  Below is a list of the things you should Do to help you deal with your indoor mold infestation. </em>
+
+      <ul class="bullet-list dos">
+        <li><span class="large">DO</span> Call your certified Mold removal and remediation professional, to get an assessment of the mold issues.</li>
+      </ul>
+
+      <ul class="bullet-list donts">
+
+        <li><span class="large">DO NOT</span> place fans on mold thinking it will go away.  When you blow air onto mold, infested areas disperse tiny spores into the air affecting air quality.</li>
+
+        <li><span class="large">DO NOT</span> try to kill the mold.  Dead mold spores are just as harmful to the human lungs are living mold spores.</li>
+
+        <li><span class="large">DO NOT</span> spray bleach or any other chemicals on the mold because this will cause the mold to disperse its spores.</li>
+
+      </ul>
+    </div>
+    
+    <!-- Storm Damage-->
+    <div ng-if="actionType == 'storm'">
+
+      <h2 class="dodont">Storm</h2>
+
+      <button class="button-red button button-block" ng-click="requestService(actionType)" side="right">
+        REQUEST SERVICE
+      </button>
+
+        <ul class="bullet-list dos">
+
+          <li><span class="large">DO</span> Cover any opening to the dwelling and take any necessary measures to diminish damages to your property and contents.</li>
+
+          <li><span class="large">DO</span> Make sure to photograph and or video all damages and content for your insurance adjuster.</li>
+
+        </ul>
+        <ul class="bullet-list donts">
+
+          <li><span class="large">DO NOT</span> Try and remove any trees or damaged building materials.</li>
+
+          <li><span class="large">DO NOT</span> Dismiss apparent "minor" damage. Always have damage inspected by appropriate professional.</li>
+
+          <li><span class="large">DO NOT</span> Use out of state “Storm chasers” Because these companies haven't put down roots in the community they're working in, it's hard to enforce a warranty or guarantee.</li>
+
+        </ul>
+
+    </div>
+
+    <!-- Fire Damage-->
+    <div ng-if="actionType == 'fire'">
+
+      <h2 class="dodont">Fire</h2>
+
+      <button class="button-red button button-block" ng-click="requestService(actionType)" side="right">
+        REQUEST SERVICE
+      </button>
+
+      <ul class="bullet-list dos">
+
+        <li><span class="large">DO</span> Call 911</li>
+
+        <li><span class="large">DO</span> Call your PREP Contractor</li>
+
+        <li><span class="large">DO</span> Call your Insurance Company</li>
+
+      </ul>
+      <ul class="bullet-list donts">
+
+        <li><span class="large">DO NOT</span> Re-enter building, unless cleared by Fire department first</li>
+
+        <li><span class="large">DO NOT</span> Try to save belongings, Contents, Food, Personal hygiene products. (May be contaminated)</li>
+
+      </ul>
+
+    </div>
+
+
+
   </ion-content>
 </ion-view>
