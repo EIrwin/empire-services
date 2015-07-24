@@ -110,11 +110,6 @@ angular.module('empire-services.controllers', [])
 .controller('SpecialistsCtrl',function($scope){
 
 	$scope.agents = [
-    {
-      name:'Keegan Barkley',
-      title:'Lead Technician',
-      phone:'515-302-1600'
-    },
 		{
 			name:'Bryan Bradley',
 			title:'Owner/Commercial Mitigation Specialist',
@@ -124,6 +119,11 @@ angular.module('empire-services.controllers', [])
       name:'Floyd Carns',
       title:'Owner/Commercial Mitigation Specialist',
       phone:'480-570-7422'
+    },
+    {
+      name: 'Andrew Pentland',
+      title:'Residential Project Manager',
+      phone:'480-438-3675'
     },
 		{
 			name:'Craig Spencer',
@@ -135,15 +135,10 @@ angular.module('empire-services.controllers', [])
 			title:'Sales and Business Development',
 			phone:'602-616-6680'
 		},
-    {
-      name: 'Andrew Pentland',
-      title:'Residential Project Manager',
-      phone:'480-438-3675'
-    },
 		{
 			name:'Laurie Williams',
 			title:'Office Manager',
-			phone:'623-414-8986'
+			phone:'480-634-6446'
 		}
 	];
 })
