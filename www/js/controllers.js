@@ -112,27 +112,27 @@ angular.module('empire-services.controllers', [])
 	$scope.agents = [
 		{
 			name:'Bryan Bradley',
-			title:'Owner/Commercial Mitigation Specialist',
+			title:'Owner/Commercial Mitigation Specialists',
 			phone:'602-284-4959'
 		},
     {
       name:'Floyd Carns',
-      title:'Owner/Commercial Mitigation Specialist',
+      title:'Owner/Commercial Mitigation Specialists',
       phone:'480-570-7422'
     },
     {
       name: 'Andrew Pentland',
-      title:'Residential Project Manager',
+      title:'Project Supervisor',
       phone:'480-438-3675'
     },
 		{
 			name:'Craig Spencer',
-			title:'Supervisor/Estimator',
+			title:'Project Manager/Estimator',
 			phone:'602-316-8356'
 		},
 		{
 			name:'Krista Spencer',
-			title:'Sales and Business Development',
+			title:'PREP/Account Manager',
 			phone:'602-616-6680'
 		},
 		{
