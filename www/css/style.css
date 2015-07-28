@@ -31,15 +31,15 @@
 }
 
 /* HOME */
+
 .home {
-	background-image: url(../img/homebg.jpg);
+  background-color: #F0E0C6;
 	background-size: cover;
 	background-repeat: no-repeat;
 	text-align: center;
 }
 .home h1, .home h2, .home h3, .home h4, .home h5, .home h6 {
-	color:#fff;
-	text-shadow: -1px -1px 0 #000,  1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	color:black;
 }
 .home h2 {
 	font-size: 50px;
