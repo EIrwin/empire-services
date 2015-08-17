@@ -61,8 +61,7 @@ angular.module('empire-services.controllers', [])
 			$scope.imageData = data;
 
 			email = {
-			    to: 'mobile-receiver@empire-services.com',
-			    cc: 'mobile-receiver@empire-services.com',
+			    to: 'newloss@empireserviceswest.com',
 			    subject: 'Mobile App Photo',
 			    attachments: 'base64:image.jpeg//' + imageData,
 			    isHtml: true
@@ -83,8 +82,7 @@ angular.module('empire-services.controllers', [])
 			$scope.imageData = data;
 
 			email = {
-			    to: 'mobile-receiver@empire-services.com',
-			    cc: 'mobile-receiver@empire-services.com',
+			    to: 'newloss@empireserviceswest.com',
 			    subject: 'Mobile App Photo',
 			    attachments: 'base64:image.jpeg//' + imageData,
 			    isHtml: true
